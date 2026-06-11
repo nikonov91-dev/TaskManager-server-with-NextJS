@@ -6,6 +6,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useSession, signIn, signOut } from 'next-auth/react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -810,8 +811,13 @@ export default function Page() {
         )}
       </main>
 
-      <footer className="py-6 border-t border-gray-150/50 text-center text-xs text-gray-400 font-medium">
+      <footer className="py-6 border-t border-gray-150/50 text-center text-xs text-gray-400 font-medium flex flex-col sm:flex-row items-center justify-between px-6 md:px-8 max-w-7xl mx-auto w-full gap-4">
         <p>© 2026 Taski Dashboard • Next.js + PostgreSQL + NextAuth.js</p>
+        <div className="flex items-center space-x-4">
+          <Link href="/about" className="text-gray-400 hover:text-indigo-600 transition-colors" id="about-us-footer-link">
+            Про нас
+          </Link>
+        </div>
       </footer>
     </div>
   );
