@@ -319,26 +319,26 @@ export default function Page() {
   return (
     <div className="min-h-screen bg-[#fafafc] text-gray-900 font-sans flex flex-col antialiased">
       {/* HEADER BAR */}
-      <header className="bg-white border-b border-gray-100 py-4 px-6 md:px-8 flex justify-between items-center sticky top-0 z-10 shadow-xs">
+      <header className="bg-emerald-600 border-b border-emerald-700 py-4 px-6 md:px-8 flex justify-between items-center sticky top-0 z-10 shadow-md text-white">
         <div className="flex items-center space-x-3">
-          <div className="bg-indigo-600 text-white p-2 rounded-xl flex items-center justify-center shadow-md">
+          <div className="bg-emerald-800 text-white p-2 rounded-xl flex items-center justify-center shadow-md">
             <ListTodo className="h-6 w-6" />
           </div>
           <div>
-            <h1 className="text-xl font-bold tracking-tight text-gray-900">Taski</h1>
-            <p className="text-xs text-gray-500 font-medium">Керування задачами</p>
+            <h1 className="text-xl font-bold tracking-tight text-white">Taski</h1>
+            <p className="text-xs text-emerald-100 font-medium">Керування задачами</p>
           </div>
         </div>
 
         {session?.user && (
           <div className="flex items-center space-x-4">
-            <div className="hidden md:flex items-center space-x-2 bg-gray-50 px-3 py-1.5 rounded-xl border border-gray-100">
-              <UserIcon className="h-4 w-4 text-indigo-600" />
-              <span className="text-sm font-semibold text-gray-700">{session.user.name}</span>
+            <div className="hidden md:flex items-center space-x-2 bg-emerald-700/60 px-3 py-1.5 rounded-xl border border-emerald-500/30">
+              <UserIcon className="h-4 w-4 text-emerald-200" />
+              <span className="text-sm font-semibold text-emerald-50">{session.user.name}</span>
             </div>
             <button 
               onClick={handleLogout}
-              className="flex items-center space-x-1.5 bg-gray-50 hover:bg-rose-50 text-gray-600 hover:text-rose-600 px-3 py-1.5 rounded-xl border border-gray-100 hover:border-rose-100 transition-all font-medium text-sm"
+              className="flex items-center space-x-1.5 bg-emerald-700 hover:bg-rose-600 text-emerald-100 hover:text-white px-3 py-1.5 rounded-xl border border-emerald-500/30 hover:border-rose-500 transition-all font-medium text-sm cursor-pointer"
               title="Вийти з акаунту"
               id="logout-btn"
             >
