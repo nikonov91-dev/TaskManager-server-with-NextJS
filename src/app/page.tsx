@@ -307,7 +307,7 @@ export default function Page() {
 
   if (status === 'loading') {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#fafafc]">
+      <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <div className="flex flex-col items-center space-y-3">
           <div className="h-10 w-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin"></div>
           <p className="text-sm font-semibold text-gray-500">Завантаження сесії...</p>
@@ -317,7 +317,7 @@ export default function Page() {
   }
 
   return (
-    <div className="min-h-screen bg-[#fafafc] text-gray-900 font-sans flex flex-col antialiased">
+    <div className="min-h-screen bg-gray-100 text-gray-900 font-sans flex flex-col antialiased">
       {/* HEADER BAR */}
       <header className="bg-emerald-600 border-b border-emerald-700 py-4 px-6 md:px-8 flex justify-between items-center sticky top-0 z-10 shadow-md text-white">
         <div className="flex items-center space-x-3">
